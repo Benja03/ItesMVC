@@ -30,7 +30,7 @@ namespace MVC.Controllers
             List<AlumnoModels> lista = new List<AlumnoModels> { A, A1, A2 };
             ViewBag.Message = "Listado de Alumnos";
 
-            return View(lista);
+            return View(lista); 
         }
 
         public ActionResult Contact()
