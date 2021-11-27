@@ -1,0 +1,52 @@
+﻿@model List<MVC.Models.DocenteModels>
+@{
+    ViewBag.Title = "Docente";
+}
+
+<h2>Docente</h2>
+<h3>@ViewBag.Message</h3>
+<table class="table table-bordered">
+    <thead>
+        <tr class="active text-uppercase">
+            <th width="10%">Legajo</th>
+            <th width="30%">Nombre</th>
+            <th width="30%">Apellido</th>
+            <th width="30%">Materia</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var obj in Model)
+        {
+            <tr>
+                <td>@obj.legajo</td>
+                <td>@obj.Nombre</td>
+                <td>@obj.Apellido</td>
+                <td>@obj.Materia</td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+<!--<table class="table table-bordered">
+    <thead>
+        <tr class="text-uppercase">
+            <th scope="col">Legajo</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Materia</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var obj in Model)
+        {
+            <tr>
+                <th scope="row">@obj.legajo</th>
+                <td>@obj.Nombre</td>
+                <td>@obj.Apellido</td>
+                <td>@obj.Materia</td>
+            </tr>
+        }
+    </tbody>
+</table>-->
+
+

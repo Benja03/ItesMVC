@@ -1,0 +1,42 @@
+﻿@model IEnumerable<MVC.Models.Docente>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Docentes</h2>
+
+<p>
+    @Html.ActionLink("Añadir Docente", "Create")
+</p>
+
+<table class="table table-bordered">
+    <thead>
+        <tr class="active text-uppercase">
+            <th width="10%">@Html.DisplayNameFor(model => model.legajo)</th>
+            <th width="15%">@Html.DisplayNameFor(model => model.Nombre)</th>
+            <th width="15%">@Html.DisplayNameFor(model => model.Apellido)</th>
+            <th width="15%">@Html.DisplayNameFor(model => model.Materia)</th>
+            <th width="20%">@Html.DisplayNameFor(model => model.Mail)</th>
+            <th>Opciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.legajo)</td>
+            <td>@Html.DisplayFor(modelItem => item.Nombre)</td>
+            <td>@Html.DisplayFor(modelItem => item.Apellido)</td>
+            <td>@Html.DisplayFor(modelItem => item.Materia)</td>
+            <td>@Html.DisplayFor(modelItem => item.Mail)</td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,30 @@
+﻿@model List<MVC.Models.AlumnoModels>
+@{
+    ViewBag.Title = "Alumno";
+}
+
+<h2>Alumnos</h2>
+<h3>@ViewBag.Message</h3>
+<card>
+    <table class="table">
+        <thead>
+            <tr class="text-uppercase">
+                <td>Legajo</td>
+                <td>Apellido</td>
+                <td>Nombre</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var objeto in Model)
+            {
+                <tr>
+                    <td>@objeto.legajo</td>
+                    <td>@objeto.Apellido</td>
+                    <td>@objeto.Nombre</td>
+                </tr>
+            }
+        </tbody>        
+    </table>
+</card>
+
+
